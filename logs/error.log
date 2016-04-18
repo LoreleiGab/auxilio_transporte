@@ -5607,3 +5607,32 @@ Stack Trace:
 #3 {main}
 
 
+2016-04-18 20:02:38 Error: [PDOException] SQLSTATE[HY000] [1049] Unknown database 'auxilio_transporte'
+Request URL: /auxilio_transporte/users/login
+Referer URL: http://localhost:82/auxilio_transporte/users/login
+Stack Trace:
+#0 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Database\Connection.php(317): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UsersTable))
+#10 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UsersTable))
+#11 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Auth\BaseAuthenticate.php(156): Cake\ORM\Table->find('all', Array)
+#13 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Auth\BaseAuthenticate.php(108): Cake\Auth\BaseAuthenticate->_query('loreleigab@hotm...')
+#14 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Auth\FormAuthenticate.php(77): Cake\Auth\BaseAuthenticate->_findUser('loreleigab@hotm...', 'felix171')
+#15 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php(769): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 C:\wamp\www\auxilio_transporte\src\Controller\UsersController.php(17): Cake\Controller\Component\AuthComponent->identify()
+#17 [internal function]: App\Controller\UsersController->login()
+#18 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#19 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#20 C:\wamp\www\auxilio_transporte\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#21 C:\wamp\www\auxilio_transporte\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#22 {main}
+
+
